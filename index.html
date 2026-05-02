@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新事業リーダー就任ご相談共有書｜RMCクリエイト＋認定講師講座</title>
+<style>
+  :root {
+    --primary: #c8788e;
+    --primary-light: #fbeef2;
+    --primary-soft: #faf3f5;
+    --primary-dark: #8a3f54;
+    --bg: #fdfbfa;
+    --text: #2a2a2a;
+    --text-light: #6a6a6a;
+    --text-muted: #9a9a9a;
+    --border: #ecdce0;
+    --border-light: #f4e8eb;
+    --accent: #c89c52;
+    --accent-bg: #fdf6e8;
+    --success: #5a8a6a;
+    --success-bg: #ebf3ed;
+    --warning-bg: #fdf0e8;
+    --warning-border: #d4a37a;
+    --info-bg: #eef3f7;
+    --info-border: #7a9bb4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.85;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 60px 30px 50px;
+    background: linear-gradient(135deg, #fef5f7 0%, #fdf0f3 50%, #faedf1 100%);
+    border-radius: 18px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(200,120,142,0.06) 0%, transparent 40%),
+                      radial-gradient(circle at 80% 70%, rgba(200,120,142,0.06) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .header .ornament {
+    font-size: 26px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5em;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+
+  .header .subtitle {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 22px;
+    letter-spacing: 0.1em;
+  }
+
+  .header .meta {
+    color: var(--text-light);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+    display: inline-block;
+    min-width: 280px;
+  }
+
+  /* Table of contents */
+  .toc {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 30px;
+    margin-bottom: 32px;
+  }
+
+  .toc-title {
+    font-size: 14px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: 0.1em;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    padding: 0;
+    column-count: 2;
+    column-gap: 30px;
+  }
+
+  .toc ol li {
+    counter-increment: toc;
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--text);
+    break-inside: avoid;
+  }
+
+  .toc ol li::before {
+    content: counter(toc) ". ";
+    color: var(--primary);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .toc ol li a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    transition: border-color 0.2s;
+  }
+
+  .toc ol li a:hover {
+    border-bottom-color: var(--primary);
+  }
+
+  /* Section */
+  section {
+    background: white;
+    border-radius: 14px;
+    padding: 40px 44px;
+    margin-bottom: 26px;
+    box-shadow: 0 1px 4px rgba(154, 71, 89, 0.03);
+    border: 1px solid var(--border-light);
+    scroll-margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 21px;
+    color: var(--primary-dark);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 600;
+  }
+
+  h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 600;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(154, 71, 89, 0.25);
+  }
+
+  h3 {
+    font-size: 17px;
+    color: var(--primary-dark);
+    margin: 28px 0 14px;
+    padding-left: 14px;
+    border-left: 4px solid var(--primary);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  h3:first-child { margin-top: 0; }
+
+  h4 {
+    font-size: 15px;
+    color: var(--primary-dark);
+    margin: 18px 0 10px;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+
+  p.lead {
+    font-size: 16px;
+    color: var(--text);
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 24px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  th, td {
+    padding: 13px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 14px;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tr.total td {
+    background: var(--primary-soft);
+    font-weight: 600;
+    color: var(--primary-dark);
+    border-top: 2px solid var(--primary);
+  }
+
+  tr.highlight td {
+    background: var(--accent-bg);
+  }
+
+  td.right { text-align: right; font-variant-numeric: tabular-nums; }
+  td.center { text-align: center; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
+  td.label { color: var(--text-light); width: 35%; }
+
+  /* Funnel diagram */
+  .funnel-wrap {
+    background: var(--primary-soft);
+    padding: 28px 24px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid var(--border-light);
+  }
+
+  .funnel-stage {
+    background: white;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+
+  .funnel-stage.entry { border-left-color: var(--info-border); background: #f7fafd; }
+  .funnel-stage.salon { border-left-color: var(--primary); }
+  .funnel-stage.create { border-left-color: var(--accent); background: var(--accent-bg); }
+  .funnel-stage.teach { border-left-color: var(--success); background: var(--success-bg); }
+
+  .funnel-stage .name {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 15px;
+  }
+
+  .funnel-stage .meta {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  .funnel-arrow {
+    text-align: center;
+    color: var(--primary);
+    font-size: 18px;
+    margin: 2px 0;
+    line-height: 1;
+  }
+
+  .funnel-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* Card grid */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .card {
+    background: var(--primary-soft);
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+  }
+
+  .card-label {
+    font-size: 12px;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .card-value {
+    font-size: 22px;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .card-sub {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* Compensation highlight */
+  .comp-highlight {
+    background: linear-gradient(135deg, #fef3f5, #fbeaef);
+    padding: 36px;
+    border-radius: 14px;
+    margin: 24px 0;
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(200,120,142,0.1);
+  }
+
+  .comp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .comp-block {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+
+  .comp-block .label {
+    font-size: 12px;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .comp-block .amount {
+    font-size: 26px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .comp-block .unit {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  .comp-total {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--primary);
+  }
+
+  .comp-total .label {
+    font-size: 13px;
+    color: var(--primary-dark);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .comp-total .amount {
+    font-size: 32px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .comp-total .sub {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  /* Callouts */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 4px solid var(--accent);
+    padding: 16px 22px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .callout.info {
+    background: var(--info-bg);
+    border-left-color: var(--info-border);
+  }
+
+  .callout.warning {
+    background: var(--warning-bg);
+    border-left-color: var(--warning-border);
+  }
+
+  .callout strong {
+    color: var(--primary-dark);
+  }
+
+  /* Lists */
+  ul.detail {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul.detail li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+    border-bottom: 1px dashed var(--border-light);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  ul.detail li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  ul.detail li:last-child { border-bottom: none; }
+
+  ul.detail li strong {
+    color: var(--primary-dark);
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  /* Candidate grid */
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 18px 0 20px;
+  }
+
+  .candidate-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .candidate-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(200,120,142,0.1);
+    transform: translateY(-1px);
+  }
+
+  .candidate-card .candidate-num {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .candidate-card .candidate-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .candidate-card .candidate-handle {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .candidate-summary {
+    background: var(--primary-soft);
+    padding: 16px 22px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .candidate-summary .summary-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .candidate-summary .summary-label {
+    font-size: 11px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  .candidate-summary .summary-value {
+    font-size: 18px;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Task block */
+  .task-block {
+    background: var(--primary-soft);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 16px 0 24px;
+  }
+
+  .task-block .task-title {
+    font-size: 15px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .task-block .task-tag {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  .task-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .task-block ul li {
+    padding: 8px 0 8px 26px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.7;
+    border-bottom: 1px dashed var(--border-light);
+  }
+
+  .task-block ul li:last-child { border-bottom: none; }
+
+  .task-block ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  /* Schedule */
+  .schedule-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .schedule-item:last-child { border-bottom: none; }
+
+  .schedule-date {
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .schedule-date .phase {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+
+  .schedule-desc {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .schedule-desc strong {
+    color: var(--primary-dark);
+  }
+
+  /* Org chart */
+  .org-chart {
+    background: var(--primary-soft);
+    padding: 28px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid var(--border-light);
+  }
+
+  .org-top {
+    background: white;
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 12px;
+    border: 2px solid var(--primary);
+  }
+
+  .org-top .role { color: var(--primary-dark); font-weight: 600; font-size: 13px; }
+  .org-top .name { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+  .org-arrow { text-align: center; color: var(--primary); font-size: 18px; margin: 4px 0; }
+
+  .org-row {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .org-row.cols-2 { grid-template-columns: 1fr 1fr; }
+  .org-row.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+  .org-box {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+
+  .org-box.lead {
+    border: 2px solid var(--accent);
+    background: var(--accent-bg);
+  }
+
+  .org-box .role {
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  .org-box .name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .org-box .desc {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* Closing message */
+  .closing {
+    background: linear-gradient(135deg, #fef5f7 0%, #fdf0f3 100%);
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .closing p { font-size: 15px; line-height: 2; }
+
+  .closing .signature {
+    text-align: right;
+    margin-top: 24px;
+    color: var(--primary-dark);
+    font-weight: 600;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 20px 0;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .container { padding: 24px 16px 60px; }
+    .header { padding: 40px 20px 32px; }
+    h1 { font-size: 22px; }
+    section { padding: 28px 24px; }
+    h2 { font-size: 19px; }
+    .toc ol { column-count: 1; }
+    .comp-row { grid-template-columns: 1fr; gap: 12px; }
+    .schedule-item { grid-template-columns: 1fr; gap: 4px; }
+    .org-row.cols-3 { grid-template-columns: 1fr; }
+    .org-row.cols-2 { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+    th, td { padding: 9px 11px; }
+    .closing { padding: 28px 22px; }
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    section { box-shadow: none; page-break-inside: avoid; }
+    .toc { page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="ornament">🌸</div>
+    <h1>新事業リーダー就任ご相談共有書</h1>
+    <p class="subtitle">RMCクリエイト ＋ 認定講師講座</p>
+    <div class="meta">
+      宛先：ゆりえさん<br>
+      作成：山口 花（はな）<br>
+      作成日：2026年4月26日
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <ol>
+      <li><a href="#s1">事業の全体像</a></li>
+      <li><a href="#s2">RMCクリエイトの概要</a></li>
+      <li><a href="#s3">認定講師講座の概要</a></li>
+      <li><a href="#s4">ゆりえさんへのご依頼内容</a></li>
+      <li><a href="#s5">報酬構造</a></li>
+      <li><a href="#s6">体制図</a></li>
+      <li><a href="#s7">ローンチスケジュール</a></li>
+      <li><a href="#s8">最後に</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1：事業の全体像 -->
+  <section id="s1">
+    <h2><span class="num">1</span>事業の全体像</h2>
+    <p>RMC全体のファネル構造は以下の通りです。新規事業（RMCクリエイト・認定講師講座）は、既存のRMCマーケティングサロンの「先」に位置します。</p>
+
+    <div class="funnel-wrap">
+      <div class="funnel-stage entry">
+        <div>
+          <div class="name">Instagram（はな本人運用）</div>
+          <div class="meta">毎日1投稿以上／ファネル全体の入口</div>
+        </div>
+      </div>
+      <div class="funnel-arrow">▼</div>
+      <div class="funnel-split">
+        <div class="funnel-stage salon">
+          <div>
+            <div class="name">RMCマーケティングサロン</div>
+            <div class="meta">¥8,800／月・目標100名</div>
+          </div>
+        </div>
+        <div class="funnel-stage salon">
+          <div>
+            <div class="name">勉強会（単発）</div>
+            <div class="meta">講義型・目標100名</div>
+          </div>
+        </div>
+      </div>
+      <div class="funnel-arrow">▼ サロン内のみで募集</div>
+      <div class="funnel-split">
+        <div class="funnel-stage teach">
+          <div>
+            <div class="name">Bright Up（SALES）</div>
+            <div class="meta">¥486,000／4ヶ月・8期継続確定</div>
+          </div>
+        </div>
+        <div class="funnel-stage teach">
+          <div>
+            <div class="name">認定講師講座（TEACH）★</div>
+            <div class="meta">約¥100,000／3ヶ月・年4回</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>RMCクリエイトの位置づけ</h3>
+    <p>
+      RMCクリエイトは <strong>月額¥500のプラットフォーム</strong> として、ファネルの最も浅い層を担います。
+      <strong>ハンドメイドに特化し、「作る技術」と「販売スタートまで」をセットで学べる場</strong>として設計します。
+    </p>
+    <p>既存の類似プラットフォームと、RMCクリエイトのポジションを以下に整理します。</p>
+    <table>
+      <tr>
+        <th style="width:18%">サービス</th>
+        <th style="width:13%">月額</th>
+        <th style="width:24%">主な対象層</th>
+        <th>サービス内容</th>
+      </tr>
+      <tr>
+        <td><strong>ミルーム</strong></td>
+        <td>約¥2,000</td>
+        <td>趣味・暇つぶし層／主婦</td>
+        <td>料理・手芸・ヨガなど多ジャンルの趣味動画が見放題のサブスク。学習目的というより「家で楽しむ」位置づけ</td>
+      </tr>
+      <tr>
+        <td><strong>SHElikes</strong></td>
+        <td>約¥16,000</td>
+        <td>キャリア多様化を志す女性</td>
+        <td>Webデザイン・ライティング・マーケティングなど40職種以上のスキルが学べる女性向けキャリアスクール</td>
+      </tr>
+      <tr class="highlight">
+        <td><strong>RMCクリエイト</strong></td>
+        <td>¥500</td>
+        <td>ハンドメイドを副業にしたい人</td>
+        <td>ハンドメイドに特化し、「作る技術」と「販売スタートまで」をセットで学べる場</td>
+      </tr>
+    </table>
+    <div class="callout info">
+      <strong>RMCクリエイトの独自性。</strong>
+      ミルームのように「趣味で終わる」のでもなく、SHElikesのように「ジャンルを問わず副業全般」でもなく、
+      <strong>「ハンドメイドというジャンル特化」かつ「作るところから販売スタートまでをワンストップで学べる」</strong>という、
+      既存プレイヤーが取っていない独自ポジションを狙います。
+    </div>
+  </section>
+
+  <!-- SECTION 2：RMCクリエイトの概要 -->
+  <section id="s2">
+    <h2><span class="num">2</span>RMCクリエイトの概要</h2>
+
+    <h3>サービス設計</h3>
+    <table>
+      <tr><td class="label">価格モデル</td><td>月額¥500（プラットフォーム利用料）＋ 各講師が設定する有料コース（任意購入）</td></tr>
+      <tr><td class="label">無料動画</td><td>講師1人につき1本（必須）。¥500月額会員が視聴可能</td></tr>
+      <tr><td class="label">有料コース</td><td>講師の自由設計（本数・価格は講師判断・複数コース販売も可）</td></tr>
+      <tr><td class="label">月次更新義務</td><td>なし（ローンチ時に納品すれば、その後の追加収録は任意）</td></tr>
+      <tr><td class="label">講師シェア</td><td>有料コース売上の <strong>90%</strong>（運営10%）</td></tr>
+      <tr><td class="label">技術スタック</td><td>UTAGE（LMS）／Vimeo Standard（動画配信）／UnivaPay（決済）</td></tr>
+    </table>
+
+    <h3>講師体制（フェーズ別）</h3>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-label">ローンチ時（2026年8月）</div>
+        <div class="card-value">10名</div>
+        <div class="card-sub">5ジャンル × 各2名／マーケサロン会員から選定</div>
+      </div>
+      <div class="card">
+        <div class="card-label">2027年6月時点</div>
+        <div class="card-value">25名</div>
+        <div class="card-sub">受講生300名フェーズ</div>
+      </div>
+      <div class="card">
+        <div class="card-label">2027年末</div>
+        <div class="card-value">50名</div>
+        <div class="card-sub">業界貢献ポジション確立</div>
+      </div>
+    </div>
+
+    <h3>初期講師の候補者（声をかけるメンバー）</h3>
+    <p>2026年8月のローンチに向けて、現在以下の候補者をリストアップしています。マーケティングサロン会員の中から、ジャンル・販売実績・SNS発信力をふまえて選定しました。</p>
+    <div class="candidate-summary">
+      <div class="summary-item">
+        <span class="summary-label">候補者数</span>
+        <span class="summary-value">12名</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">採用枠</span>
+        <span class="summary-value">10名</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">超過数</span>
+        <span class="summary-value">+2名</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">ステータス</span>
+        <span class="summary-value">声かけ前</span>
+      </div>
+    </div>
+    <div class="candidate-grid">
+      <div class="candidate-card">
+        <div class="candidate-num">01</div>
+        <div class="candidate-name">🐔かすみ</div>
+        <div class="candidate-handle">Gypso</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">02</div>
+        <div class="candidate-name">🍀みょうが</div>
+        <div class="candidate-handle">myouga koubou</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">03</div>
+        <div class="candidate-name">Yuri</div>
+        <div class="candidate-handle">mitte nicori</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">04</div>
+        <div class="candidate-name">🫏 みさと</div>
+        <div class="candidate-handle">son:mul</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">05</div>
+        <div class="candidate-name">🧵 mako</div>
+        <div class="candidate-handle">mynails</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">06</div>
+        <div class="candidate-name">ミト</div>
+        <div class="candidate-handle">bubbly pebble</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">07</div>
+        <div class="candidate-name">🐈‍⬛Ayano</div>
+        <div class="candidate-handle">lisora</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">08</div>
+        <div class="candidate-name">ナエ</div>
+        <div class="candidate-handle">ナエのニット</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">09</div>
+        <div class="candidate-name">yuka_myun.</div>
+        <div class="candidate-handle">—</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">10</div>
+        <div class="candidate-name">のめこ</div>
+        <div class="candidate-handle">nomeco Illust&amp;Design</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">11</div>
+        <div class="candidate-name">イェカ</div>
+        <div class="candidate-handle">yeKa</div>
+      </div>
+      <div class="candidate-card">
+        <div class="candidate-num">12</div>
+        <div class="candidate-name">ナミ💫</div>
+        <div class="candidate-handle">jiiiiiikジーク</div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>ご相談ポイント。</strong>
+      候補者が10名の枠に対し2名分多い状態です。ジャンル分散（5ジャンル × 各2名）の調整、声かけの優先順位、各候補者へのアプローチ順序などについて、ゆりえさんとご相談のうえ最終確定したく考えています。
+    </div>
+
+    <h3>受講生規模（ローンチ時）</h3>
+    <table>
+      <tr><th>項目</th><th>規模感</th></tr>
+      <tr><td>受講生数</td><td>100名</td></tr>
+      <tr><td>初期5ジャンル（暫定）</td><td>アクセサリー／レジン／刺繍／編み物／革小物</td></tr>
+      <tr><td>初期コンテンツ本数</td><td>無料動画10本＋有料コース10本（計20本以上）</td></tr>
+    </table>
+  </section>
+
+  <!-- SECTION 3：認定講師講座の概要 -->
+  <section id="s3">
+    <h2><span class="num">3</span>認定講師講座の概要</h2>
+
+    <div class="callout warning">
+      <strong>重要：本セクションの内容はすべて「現時点の暫定構想」です。</strong>
+      講座のカリキュラム内容・到達目標・運営方法はまだ確定しておらず、価格設定も仮置きです。
+      ゆりえさんとご一緒に設計していくフェーズに入ります。
+    </div>
+
+    <h3>サービス設計（仮）</h3>
+    <table>
+      <tr><td class="label">価格（仮）</td><td>約¥100,000／3ヶ月　※カリキュラム確定後に見直し</td></tr>
+      <tr><td class="label">カリキュラム</td><td><strong>未確定</strong>（ゆりえさんと協議のうえ、2026年6月までに設計予定）</td></tr>
+      <tr><td class="label">募集チャネル</td><td>RMCマーケティングサロン会員（100名）からのみ</td></tr>
+      <tr><td class="label">ローンチ頻度（仮）</td><td>3ヶ月に1度（年4回）</td></tr>
+      <tr><td class="label">1ローンチあたり成約目標（仮）</td><td>8名</td></tr>
+      <tr><td class="label">年間売上想定（仮）</td><td><strong>¥3,200,000</strong>　※価格・成約数の前提変更で増減</td></tr>
+    </table>
+
+    <h3>戦略的位置づけ</h3>
+    <p>
+      RMCクリエイト（プラットフォーム月額¥500）の赤字を相殺するキャッシュエンジンであり、
+      同時に次世代のクリエイト講師パイプラインを生み出す装置です。
+      認定講師講座修了者の中から、RMCクリエイトの新規講師が継続的に補充される設計を意図しています。
+    </p>
+  </section>
+
+  <!-- SECTION 4：ゆりえさんへのご依頼内容 -->
+  <section id="s4">
+    <h2><span class="num">4</span>ゆりえさんへのご依頼内容</h2>
+    <p class="lead">
+      ゆりえさんには、RMCクリエイトと認定講師講座の <strong>両事業のリーダー</strong> を担っていただきたく考えています。
+      具体的に行っていただきたいことを、事業ごとに分けて整理します。
+    </p>
+
+    <div class="task-block">
+      <div class="task-title"><span class="task-tag">RMCクリエイト</span>全体の進捗管理</div>
+      <ul>
+        <li><strong>講師の進捗確認：</strong>10名の講師が、ローンチ（8月）までに無料動画1本＋有料コース1つを完成できているか、定期的に状況をヒアリング・確認</li>
+        <li><strong>遅延・課題のエスカレーション：</strong>遅れている工程・困っている講師がいれば、はなに即時報告し、対応方針を相談</li>
+        <li><strong>KPIモニタリング：</strong>ローンチ後、受講生数・有料コース購入数・視聴率などの数値を月次で確認し、状況をはな・しほさんに共有</li>
+        <li><strong>プロモーションの進行監督：</strong>しほさんが設計したプロモーション施策の実行状況をフォロー（実務はサポートスタッフが担当）</li>
+      </ul>
+    </div>
+
+    <div class="task-block">
+      <div class="task-title"><span class="task-tag">認定講師講座</span>授業の担当（メイン講師）</div>
+      <ul>
+        <li><strong>カリキュラム設計：</strong>3ヶ月の講座で「何を教え／受講生をどこまで成長させるか」をはなと協議のうえ確定（2026年6月までに完成）</li>
+        <li><strong>授業の担当：</strong>講座本編の授業を <strong>ゆりえさんがメイン講師として直接担当</strong>。受講生への講義・ワーク・課題フィードバックを実施</li>
+        <li><strong>ローンチ告知の取り仕切り：</strong>サロン内告知・LP内容のチェック・募集メールの監修</li>
+        <li><strong>修了後のフォロー：</strong>修了生がRMCクリエイトの新規講師としてエントリーする際の橋渡し</li>
+      </ul>
+    </div>
+
+    <h3>ゆりえさんが担当しない業務</h3>
+    <ul class="detail">
+      <li><strong>講師管理（採用・契約・関係構築）：</strong>はなが直接担当します。マーケサロン会員からの講師選定、契約締結、フェーズ拡張時の追加採用までを含みます。</li>
+      <li><strong>ローンチ準備の進行管理（システム構築・LP制作・決済設定など）：</strong>自社内サポートスタッフが担当します。</li>
+      <li><strong>コンテンツ管理（動画アップロード・教材整理）：</strong>自社内サポートスタッフが担当します。</li>
+      <li><strong>受講生対応（クリエイト・認定講師講座いずれの問い合わせ・チャット・ZOOM対応）：</strong>自社内サポートスタッフが担当します。</li>
+      <li><strong>システム管理（UTAGE／Vimeo／決済連携）：</strong>自社内サポートスタッフが担当します。</li>
+      <li><strong>マーケティング戦略・プロモーション設計：</strong>しほさんが監修します。</li>
+    </ul>
+    <div class="callout info">
+      <strong>明示しておきたいこと。</strong>
+      ゆりえさん一人で全業務を抱える設計にはしません。
+      講師管理ははな、マーケティング監修はしほさん、実務（受講生対応・システム構築・コンテンツ管理）はサポートスタッフが担当します。
+      ゆりえさんには <strong>「全体の進捗を見る」と「認定講師講座でメイン講師として教える」の2つ</strong> に集中していただく前提です。
+    </div>
+  </section>
+
+  <!-- SECTION 5：報酬構造 -->
+  <section id="s5">
+    <h2><span class="num">5</span>報酬構造</h2>
+
+    <div class="callout warning">
+      <strong>はじめに、報酬についての考え方をお伝えします。</strong><br>
+      下記の金額は<strong>「現時点でのたたき台」</strong>であり、確定事項ではありません。
+      実際に業務を開始してみないと、業務量・難易度・成果に対して妥当な水準かどうか判断できないと考えています。
+      そのため、業務開始後に状況を見ながら見直していく前提です。<br><br>
+      ただし、<strong>現在お支払いしている月額（マインド担当としての報酬）を下回ることはありません。</strong>
+      これはゆりえさんに安心して新事業に取り組んでいただくための、はなからのお約束です。
+    </div>
+
+    <p>その上で、2つの収入軸を組み合わせた現時点の構想は以下の通りです。</p>
+
+    <div class="comp-highlight">
+      <div class="comp-row">
+        <div class="comp-block">
+          <div class="label">①RMCクリエイト リーダー報酬（仮）</div>
+          <div class="amount">¥100,000</div>
+          <div class="unit">月額固定（¥1,200,000／年）</div>
+        </div>
+        <div class="comp-block">
+          <div class="label">②認定講師講座 成果報酬（仮）</div>
+          <div class="amount">25%</div>
+          <div class="unit">講座売上に対する成果報酬</div>
+        </div>
+      </div>
+      <div class="comp-total">
+        <div class="label">想定年収（仮・成約目標達成時）</div>
+        <div class="amount">¥2,000,000</div>
+        <div class="sub">¥1,200,000（固定）＋ ¥800,000（¥3,200,000 × 25%）</div>
+      </div>
+    </div>
+
+    <h3>報酬構造の考え方</h3>
+    <ul class="detail">
+      <li><strong>固定報酬¥100,000（仮）：</strong>RMCクリエイトのリーダー業務（全体進捗管理・KPIモニタリング）に対する基礎報酬。受講生数・売上に関わらず安定して支払われます。</li>
+      <li><strong>成果報酬25%（仮）：</strong>認定講師講座売上に対するパーセンテージ。年4回のローンチごとに集計・お支払い。1ローンチ8名成約時：¥200,000／回。</li>
+      <li><strong>キャッシュフロー特性：</strong>固定¥100,000は毎月、成果報酬は3ヶ月に1度のローンチ月にスパイクします。</li>
+    </ul>
+
+    <h3>支払いシミュレーション（仮・年間）</h3>
+    <table>
+      <tr><th>月</th><th>固定報酬</th><th>成果報酬</th><th class="right">月次合計</th></tr>
+      <tr><td>通常月（年8ヶ月）</td><td>¥100,000</td><td>—</td><td class="num">¥100,000</td></tr>
+      <tr><td>ローンチ月（年4回）</td><td>¥100,000</td><td>¥200,000</td><td class="num">¥300,000</td></tr>
+      <tr class="total"><td>年間合計</td><td>¥1,200,000</td><td>¥800,000</td><td class="num">¥2,000,000</td></tr>
+    </table>
+
+    <h3>見直しの考え方</h3>
+    <ul class="detail">
+      <li><strong>業務開始後の見直し：</strong>業務量・実労働時間・成果が見えてきた段階で、固定報酬・成果報酬のバランスを再協議します。一方的に決めるのではなく、双方納得感のある形を作っていきたいと考えています。</li>
+      <li><strong>下限の保証：</strong>どのような調整になっても、<strong>現在お支払いしている月額を下回ることはありません</strong>。</li>
+      <li><strong>条件のご相談：</strong>固定報酬の額／成果報酬のパーセンテージ／支払いタイミングなど、ゆりえさんのご事情・ご希望に合わせて調整可能です。率直にご意見をお聞かせください。</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 6：体制図 -->
+  <section id="s6">
+    <h2><span class="num">6</span>体制図</h2>
+    <div class="org-chart">
+      <div class="org-top">
+        <div class="role">統括・講師管理</div>
+        <div class="name">山口 花（はな）</div>
+      </div>
+      <div class="org-arrow">▼</div>
+      <div class="org-row cols-2">
+        <div class="org-box lead">
+          <div class="role">クリエイト＋認定講師講座 リーダー</div>
+          <div class="name">ゆりえさん</div>
+          <div class="desc">クリエイト全体の進捗管理／認定講師講座の授業担当</div>
+        </div>
+        <div class="org-box">
+          <div class="role">マーケティング監修</div>
+          <div class="name">しほさん</div>
+          <div class="desc">プロモーション設計／集客戦略の監修</div>
+        </div>
+      </div>
+      <div class="org-arrow">▼</div>
+      <div class="org-row cols-3">
+        <div class="org-box">
+          <div class="role">コンテンツ管理</div>
+          <div class="name">自社内サポート</div>
+          <div class="desc">動画アップロード／教材整理</div>
+        </div>
+        <div class="org-box">
+          <div class="role">受講生対応</div>
+          <div class="name">自社内サポート</div>
+          <div class="desc">問い合わせ対応／フォロー</div>
+        </div>
+        <div class="org-box">
+          <div class="role">システム管理</div>
+          <div class="name">自社内サポート</div>
+          <div class="desc">UTAGE／Vimeo／決済連携</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7：ローンチスケジュール -->
+  <section id="s7">
+    <h2><span class="num">7</span>ローンチスケジュール</h2>
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 0</span>2026年5月</div>
+        <div class="schedule-desc"><strong>ゆりえさんへの正式打診・本人意向確認（本書）</strong>。報酬・業務範囲・体制について合意形成。</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 1</span>2026年6月</div>
+        <div class="schedule-desc">初期講師10名の選定・打診開始／認定講師講座カリキュラム設計／契約書整備。</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 2</span>2026年7月</div>
+        <div class="schedule-desc">UTAGE＋Vimeo＋UnivaPay 環境構築／講師の動画収録／LP制作。</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 3</span>2026年8月</div>
+        <div class="schedule-desc"><strong>サロン内ローンチ（受講生50名想定）</strong>。マーケサロン会員にRMCクリエイトを案内。</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 4</span>2026年10月</div>
+        <div class="schedule-desc">外部β（受講生75名）。Instagramフォロワー・勉強会経由の集客を本格化。</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 5</span>2026年12月</div>
+        <div class="schedule-desc"><strong>本ローンチ（受講生100名）／第1回認定講師講座ローンチ</strong>。</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-date"><span class="phase">Phase 6</span>2027年3月〜6月</div>
+        <div class="schedule-desc">第2回〜第3回認定講師講座ローンチ／受講生300名フェーズ／講師25名体制への拡張。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8：最後に -->
+  <section id="s8">
+    <h2><span class="num">8</span>最後に</h2>
+    <div class="closing">
+      <p>
+        ゆりえさん、長文をお読みいただきありがとうございます。
+      </p>
+      <p>
+        RMCクリエイトと認定講師講座は、Rebel Muses Craft の2期目の中核となる事業です。
+        この事業のリーダーをゆりえさんにお任せしたいというご相談は、
+        私自身、何度も検討した上で出した結論です。
+      </p>
+      <p>
+        とはいえ、これはあくまで「私からの提案」であって、
+        ゆりえさんが受けるかどうか・どんな条件なら受けられるかは、
+        ゆりえさんご自身の状況とお気持ちで決めていただく前提です。
+      </p>
+      <p>
+        「これは無理」「ここは変えてほしい」「もう少し考えたい」、どんなご返答でも構いません。
+        近日中にお時間をいただき、率直にお話しさせてください。
+      </p>
+      <p class="signature">
+        山口 花（はな）<br>
+        Rebel Muses Craft 代表
+      </p>
+    </div>
+  </section>
+
+  <div class="footer">
+    本書は2026年4月26日時点の構想に基づきます。<br>
+    数値・スケジュール・体制は、合意形成プロセスの中で更新されることを想定しています。
+  </div>
+
+</div>
+</body>
+</html>
