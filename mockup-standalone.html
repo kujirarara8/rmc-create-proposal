@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>RMCクリエイト｜サイトデザインモックアップ v7</title>
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --card: #FFFFFF;
+    --sub-bg: #FAF7F2;
+    --accent: #C08654;
+    --accent-dark: #8B4513;
+    --wine: #9A5A66;
+    --wine-dark: #7A4550;
+    --text: #3A2E24;
+    --text-light: #8B7768;
+    --line: #EEE6DB;
+    --pink-tag: #F4E4D8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+  }
+  img { display: block; max-width: 100%; }
+  .phone-frame {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--bg);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  /* ヘッダー */
+  header {
+    background: var(--card);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header .logo {
+    font-family: 'Georgia', 'Hiragino Mincho ProN', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: 3px;
+  }
+  header .logo .sub {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--text);
+    margin-left: 8px;
+    letter-spacing: 4px;
+    font-weight: 300;
+  }
+  header .header-actions { display: flex; gap: 10px; align-items: center; }
+  header .icon-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+  }
+  header .login-btn {
+    background: var(--wine);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+
+  .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .ico-nav { width: 24px; height: 24px; }
+
+  /* 検索バー */
+  .search-bar {
+    background: var(--card);
+    padding: 4px 20px 16px;
+  }
+  .search-input-wrap { position: relative; }
+  .search-input {
+    width: 100%;
+    background: #F5F1EA;
+    border: none;
+    padding: 14px 20px 14px 48px;
+    border-radius: 30px;
+    font-size: 14px;
+    color: var(--text);
+    font-family: inherit;
+  }
+  .search-input-wrap .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.5;
+  }
+
+  /* ヒーロー */
+  .hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: #EEE6DB;
+  }
+  .hero img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 12%;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 22px 24px;
+    color: var(--text);
+    word-break: keep-all;
+  }
+  .hero-overlay .h-title {
+    font-family: 'Georgia', 'Hiragino Mincho ProN', serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+  .hero-overlay .h-sub {
+    font-size: 13px;
+    margin-top: 8px;
+    font-family: 'Hiragino Sans', sans-serif;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+
+  /* 4丸ボタン */
+  .nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 32px 20px;
+    background: var(--sub-bg);
+  }
+  .nav-button { text-align: center; }
+  .nav-button .circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    margin: 0 auto 10px;
+    box-shadow: 0 2px 8px rgba(139, 107, 74, 0.08);
+    overflow: hidden;
+  }
+  .nav-button .circle .ico { width: 26px; height: 26px; stroke-width: 1.5; }
+  .nav-button .circle img { width: 56px; height: 56px; object-fit: contain; }
+  .nav-button .label {
+    font-size: 13px;
+    color: var(--text);
+    font-family: 'Hiragino Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  /* セクション */
+  section { padding: 24px 20px; }
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+  }
+  .section-title h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+    font-family: 'Hiragino Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+  .section-title h2::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 16px;
+    background: var(--wine);
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  .section-title .more {
+    font-size: 12px;
+    color: var(--wine);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .section-title .more::after { content: ' ›'; margin-left: 2px; }
+
+  /* 今日のおすすめ 3×2 */
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 8px;
+  }
+  .course-card { display: flex; flex-direction: column; }
+  .course-thumb {
+    width: 100%;
+    aspect-ratio: 3/2;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    background: #EEE6DB;
+  }
+  .course-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .course-card .course-title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text);
+    margin-bottom: 4px;
+    font-family: 'Hiragino Sans', sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .course-card .course-teacher {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .course-card .course-price {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wine);
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .course-card .course-price .tax {
+    font-size: 10px;
+    color: var(--text-light);
+    margin-left: 2px;
+    font-weight: 400;
+  }
+
+  /* 横スクロール */
+  .course-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 20px;
+    margin: 0 -20px;
+    scrollbar-width: none;
+  }
+  .course-scroll::-webkit-scrollbar { display: none; }
+  .course-scroll .course-card {
+    flex-shrink: 0;
+    width: 150px;
+  }
+
+  /* ニュークリエイター */
+  .creator-list { display: flex; flex-direction: column; gap: 12px; }
+  .creator-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--sub-bg);
+    padding: 14px;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .creator-card::after {
+    content: 'NEW';
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: var(--wine);
+    color: white;
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .creator-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #EEE6DB;
+  }
+  .creator-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .creator-body { flex: 1; min-width: 0; padding-right: 32px; }
+  .creator-body .c-name { font-size: 14px; font-weight: 600; color: var(--text); }
+  .creator-body .c-cat { font-size: 11px; color: var(--wine); font-weight: 500; margin: 2px 0 4px; }
+  .creator-body .c-msg { font-size: 12px; color: var(--text-light); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* カテゴリ 4×2 */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .category-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 4px 12px;
+    text-align: center;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .category-card .cat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    margin-bottom: 6px;
+    color: var(--accent-dark);
+  }
+  .category-card .cat-icon .ico { width: 22px; height: 22px; }
+  .category-card .cat-icon img { width: 56px; height: 56px; object-fit: contain; }
+  .category-card .cat-name { font-size: 11px; font-weight: 500; color: var(--text); line-height: 1.3; }
+  .category-card .cat-count { font-size: 9px; color: var(--text-light); margin-top: 3px; }
+
+  /* ランキング */
+  .rank-list { display: flex; flex-direction: column; gap: 10px; }
+  .rank-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--sub-bg);
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .rank-num {
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+    font-family: 'Georgia', serif;
+  }
+  .rank-num.gold { background: linear-gradient(135deg, #D9BC5C 0%, #B69A3C 100%); }
+  .rank-num.silver { background: linear-gradient(135deg, #B8B8B8 0%, #8A8A8A 100%); }
+  .rank-num.bronze { background: linear-gradient(135deg, #C58862 0%, #9C6742 100%); }
+  .rank-thumb { width: 84px; height: 56px; border-radius: 6px; flex-shrink: 0; overflow: hidden; background: #EEE6DB; }
+  .rank-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .rank-info { flex: 1; min-width: 0; }
+  .rank-info .r-title { font-size: 13px; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .rank-info .r-teacher { font-size: 11px; color: var(--text-light); }
+  .rank-info .r-price { font-size: 12px; color: var(--wine); font-weight: 600; }
+
+  /* ブランド */
+  .brand-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 20px;
+    margin: 0 -20px;
+    scrollbar-width: none;
+  }
+  .brand-scroll::-webkit-scrollbar { display: none; }
+  .brand-card {
+    flex-shrink: 0;
+    width: 150px;
+    background: var(--sub-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .brand-cover { width: 100%; height: 100px; overflow: hidden; background: #EEE6DB; }
+  .brand-cover img { width: 100%; height: 100%; object-fit: cover; }
+  .brand-avatar-wrap { text-align: center; margin-top: -28px; }
+  .brand-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #EEE6DB;
+  }
+  .brand-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .brand-body { padding: 8px 12px 14px; text-align: center; }
+  .brand-body .b-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .brand-body .b-tag { font-size: 11px; color: var(--text-light); margin-bottom: 8px; }
+  .brand-body .b-btn {
+    background: var(--wine);
+    color: white;
+    font-size: 11px;
+    padding: 4px 14px;
+    border-radius: 12px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  /* 記事 */
+  .article-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 20px;
+    margin: 0 -20px;
+    scrollbar-width: none;
+  }
+  .article-scroll::-webkit-scrollbar { display: none; }
+  .article-card {
+    flex-shrink: 0;
+    width: 240px;
+    background: var(--sub-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .article-thumb { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #EEE6DB; }
+  .article-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .article-info { padding: 10px 14px 14px; }
+  .article-info .a-label { font-size: 10px; color: var(--wine); font-weight: 600; margin-bottom: 4px; letter-spacing: 2px; font-family: 'Georgia', serif; }
+  .article-info .a-title { font-size: 13px; font-weight: 500; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 6px; }
+  .article-info .a-teacher { font-size: 11px; color: var(--text-light); }
+
+  /* トレンド */
+  .trend-tags { display: flex; flex-wrap: wrap; gap: 8px; font-family: 'Hiragino Sans', sans-serif; }
+  .trend-tag {
+    background: var(--pink-tag);
+    color: var(--accent-dark);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .trend-tag::before { content: '# '; opacity: 0.5; }
+
+  /* 特集 */
+  .feature-list { display: flex; flex-direction: column; gap: 10px; font-family: 'Hiragino Sans', sans-serif; }
+  .feature-item {
+    background: var(--sub-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+  }
+  .feature-item .f-thumb { width: 120px; height: 80px; border-radius: 6px; flex-shrink: 0; overflow: hidden; background: #EEE6DB; }
+  .feature-item .f-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .feature-item .f-body { flex: 1; min-width: 0; }
+  .feature-item .f-label { font-size: 10px; color: var(--wine); font-weight: 600; letter-spacing: 2px; font-family: 'Georgia', serif; }
+  .feature-item .f-title { font-size: 14px; font-weight: 600; margin: 2px 0; }
+  .feature-item .f-desc { font-size: 11px; color: var(--text-light); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* ボトムナビ */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 420px;
+    width: 100%;
+    background: white;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 12px;
+    z-index: 100;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .nav-item { flex: 1; text-align: center; color: var(--text-light); font-size: 10px; }
+  .nav-item.active { color: var(--wine); }
+  .nav-item .icon-wrap { display: flex; justify-content: center; align-items: center; height: 22px; margin-bottom: 3px; }
+
+  .mock-note {
+    background: #FFF8E1;
+    color: #886B00;
+    padding: 12px 20px;
+    font-size: 11px;
+    font-family: 'Hiragino Sans', sans-serif;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M12 22c5-5 8-9 8-13a5 5 0 00-10 0 5 5 0 002 4c-2 3-4 5-4 5"/><path d="M12 22V10"/></symbol>
+    <symbol id="i-crown-simple" viewBox="0 0 24 24"><path d="M3 8l3 8h12l3-8-5 4-4-6-4 6z"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1"/></symbol>
+    <symbol id="i-person-simple" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></symbol>
+    <symbol id="i-needle" viewBox="0 0 24 24"><path d="M2 22l10-10M18 6l4 4-12 12L2 22l4-8L18 6z"/></symbol>
+    <symbol id="i-knot" viewBox="0 0 24 24"><path d="M4 6c8 0 8 12 16 12M4 18c8 0 8-12 16-12"/></symbol>
+    <symbol id="i-yarn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 5c2 6 8 8 8 14M16 5c-2 6-8 8-8 14"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2s7 8 7 13a7 7 0 01-14 0c0-5 7-13 7-13z"/></symbol>
+    <symbol id="i-wire" viewBox="0 0 24 24"><path d="M4 12c0-4 4-4 4 0s-4 4-4 8h16c0-4-4-4-4-8s4-4 4-8"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c-1 3-4 4-4 8a4 4 0 008 0c0-4-3-5-4-8z"/></symbol>
+  </defs>
+</svg>
+
+<div class="phone-frame">
+
+  <div class="mock-note">
+    RMCクリエイト サイトデザインモックアップ v7（ローカル画像対応版）<br>
+    ※ 同じ場所に <b>images/</b> フォルダを作り、写真リスト（RMCクリエイト_写真リスト.md）に従って画像を配置してください。<br>
+    ※ Claudeのプレビューでは表示されません。<b>Finderからブラウザで直接開く</b>と表示されます。
+  </div>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="logo">RMC<span class="sub">CREATE</span></div>
+    <div class="header-actions">
+      <div class="icon-btn"><svg class="ico"><use href="#i-bell"/></svg></div>
+      <a class="login-btn">ログイン</a>
+    </div>
+  </header>
+
+  <!-- 検索バー -->
+  <div class="search-bar">
+    <div class="search-input-wrap">
+      <svg class="search-icon"><use href="#i-search"/></svg>
+      <input class="search-input" type="text" placeholder="講座・講師名で検索">
+    </div>
+  </div>
+
+  <!-- ① ヒーロー -->
+  <div class="hero">
+    <img src="hero.jpg" alt="">
+    <div class="hero-overlay">
+      <div class="h-title">つくるを、仕事に。</div>
+      <div class="h-sub">ハンドメイドを学ぶ、新しい場所</div>
+    </div>
+  </div>
+
+  <!-- ② 4丸ボタン -->
+  <div class="nav-buttons">
+    <div class="nav-button">
+      <div class="circle"><img src="nav-01.png" alt=""></div>
+      <div class="label">人気</div>
+    </div>
+    <div class="nav-button">
+      <div class="circle"><img src="nav-02.png" alt=""></div>
+      <div class="label">ランキング</div>
+    </div>
+    <div class="nav-button">
+      <div class="circle"><img src="nav-03.png" alt=""></div>
+      <div class="label">テーマ別</div>
+    </div>
+    <div class="nav-button">
+      <div class="circle"><img src="nav-04.png" alt=""></div>
+      <div class="label">作家</div>
+    </div>
+  </div>
+
+  <!-- ③ 今日のおすすめ 3x2 -->
+  <section>
+    <div class="section-title"><h2>今日のおすすめ</h2><a class="more">もっと見る</a></div>
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-01.jpg" alt=""></div>
+        <div class="course-title">大人のパールアクセサリー講座</div>
+        <div class="course-teacher">yukiさん</div>
+        <div class="course-price">¥4,800<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-02.jpg" alt=""></div>
+        <div class="course-title">レジンアクセサリー基礎講座</div>
+        <div class="course-teacher">sakuraさん</div>
+        <div class="course-price">¥5,500<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-03.jpg" alt=""></div>
+        <div class="course-title">マクラメ編みバッグ講座</div>
+        <div class="course-teacher">miiさん</div>
+        <div class="course-price">¥6,800<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-04.jpg" alt=""></div>
+        <div class="course-title">ボタニカルキャンドル講座</div>
+        <div class="course-teacher">hanaさん</div>
+        <div class="course-price">¥5,200<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-05.jpg" alt=""></div>
+        <div class="course-title">刺繍でつくる花のブローチ講座</div>
+        <div class="course-teacher">yukaさん</div>
+        <div class="course-price">¥4,500<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-06.jpg" alt=""></div>
+        <div class="course-title">ビーズのスマホストラップ講座</div>
+        <div class="course-teacher">akikoさん</div>
+        <div class="course-price">¥3,800<span class="tax">(税込)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 最近チェックした -->
+  <section>
+    <div class="section-title"><h2>最近チェックした</h2></div>
+    <div class="course-scroll">
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-07.jpg" alt=""></div>
+        <div class="course-title">ワイヤーワークの基本と応用</div>
+        <div class="course-teacher">Yuriさん</div>
+        <div class="course-price">¥4,500<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-05.jpg" alt=""></div>
+        <div class="course-title">刺繍で描く花のブローチ</div>
+        <div class="course-teacher">ミトさん</div>
+        <div class="course-price">¥7,200<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-08.jpg" alt=""></div>
+        <div class="course-title">初めてのパラコード</div>
+        <div class="course-teacher">manamiさん</div>
+        <div class="course-price">¥3,800<span class="tax">(税込)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ あなたへのおすすめ -->
+  <section>
+    <div class="section-title"><h2>あなたへのおすすめ</h2><a class="more">もっと見る</a></div>
+    <div class="course-scroll">
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-02.jpg" alt=""></div>
+        <div class="course-title">透明感レジンアクセサリー</div>
+        <div class="course-teacher">のめこさん</div>
+        <div class="course-price">¥5,000<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-09.jpg" alt=""></div>
+        <div class="course-title">革小物の仕立て講座</div>
+        <div class="course-teacher">Ayanoさん</div>
+        <div class="course-price">¥9,800<span class="tax">(税込)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><img src="course-04.jpg" alt=""></div>
+        <div class="course-title">ボタニカルキャンドル講座</div>
+        <div class="course-teacher">manamiさん</div>
+        <div class="course-price">¥5,500<span class="tax">(税込)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ ニュークリエイター -->
+  <section>
+    <div class="section-title"><h2>今週のニュークリエイター</h2><a class="more">もっと見る</a></div>
+    <div class="creator-list">
+      <div class="creator-card">
+        <div class="creator-avatar"><img src="teacher-01.jpg" alt=""></div>
+        <div class="creator-body">
+          <div class="c-name">ayumiさん</div>
+          <div class="c-cat">刺繍</div>
+          <div class="c-msg">季節のお花を刺繍で表現します。ゆっくり丁寧に、あなたのペースで作れる講座を用意しました。</div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div class="creator-avatar"><img src="teacher-02.jpg" alt=""></div>
+        <div class="creator-body">
+          <div class="c-name">まどかさん</div>
+          <div class="c-cat">レジン</div>
+          <div class="c-msg">透明感のあるアクセサリー作りを、初心者の方にもわかりやすくお伝えします。</div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div class="creator-avatar"><img src="teacher-03.jpg" alt=""></div>
+        <div class="creator-body">
+          <div class="c-name">yoshieさん</div>
+          <div class="c-cat">編み物</div>
+          <div class="c-msg">毛糸の温かみを感じられる冬アイテムを一緒に作りましょう。編み物歴20年の技をお伝えします。</div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div class="creator-avatar"><img src="teacher-04.jpg" alt=""></div>
+        <div class="creator-body">
+          <div class="c-name">kiyokaさん</div>
+          <div class="c-cat">キャンドル</div>
+          <div class="c-msg">香りとかたちを楽しむアロマキャンドル。癒しの時間を作る一歩を、ここから始めませんか。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ カテゴリ 4x2 -->
+  <section>
+    <div class="section-title"><h2>カテゴリから探す</h2><a class="more">すべて見る</a></div>
+    <div class="category-grid">
+      <div class="category-card"><div class="cat-icon"><img src="icon-01.png" alt=""></div><div class="cat-name">刺繍</div><div class="cat-count">42講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-02.png" alt=""></div><div class="cat-name">パラコード</div><div class="cat-count">18講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-03.png" alt=""></div><div class="cat-name">編み物</div><div class="cat-count">36講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-04.png" alt=""></div><div class="cat-name">レジン</div><div class="cat-count">51講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-05.png" alt=""></div><div class="cat-name">ワイヤー</div><div class="cat-count">24講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-06.png" alt=""></div><div class="cat-name">アクセサリー</div><div class="cat-count">68講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-07.png" alt=""></div><div class="cat-name">革小物</div><div class="cat-count">22講座</div></div>
+      <div class="category-card"><div class="cat-icon"><img src="icon-08.png" alt=""></div><div class="cat-name">キャンドル</div><div class="cat-count">15講座</div></div>
+    </div>
+  </section>
+
+  <!-- ⑧ ランキング -->
+  <section>
+    <div class="section-title"><h2>今週のランキング</h2><a class="more">もっと見る</a></div>
+    <div class="rank-list">
+      <div class="rank-item">
+        <div class="rank-num gold">1</div>
+        <div class="rank-thumb"><img src="course-01.jpg" alt=""></div>
+        <div class="rank-info"><div class="r-title">大人のパールアクセサリー講座</div><div class="r-teacher">yukiさん</div><div class="r-price">¥4,800</div></div>
+      </div>
+      <div class="rank-item">
+        <div class="rank-num silver">2</div>
+        <div class="rank-thumb"><img src="course-02.jpg" alt=""></div>
+        <div class="rank-info"><div class="r-title">レジンアクセサリー基礎講座</div><div class="r-teacher">sakuraさん</div><div class="r-price">¥5,500</div></div>
+      </div>
+      <div class="rank-item">
+        <div class="rank-num bronze">3</div>
+        <div class="rank-thumb"><img src="course-04.jpg" alt=""></div>
+        <div class="rank-info"><div class="r-title">ボタニカルキャンドル講座</div><div class="r-teacher">hanaさん</div><div class="r-price">¥5,200</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ ブランド -->
+  <section>
+    <div class="section-title"><h2>人気作家ブランド</h2><a class="more">もっと見る</a></div>
+    <div class="brand-scroll">
+      <div class="brand-card">
+        <div class="brand-cover"><img src="course-01.jpg" alt=""></div>
+        <div class="brand-avatar-wrap"><div class="brand-avatar"><img src="teacher-01.jpg" alt=""></div></div>
+        <div class="brand-body"><div class="b-name">Gypso</div><div class="b-tag">アクセサリー</div><div class="b-btn">フォロー</div></div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-cover"><img src="course-02.jpg" alt=""></div>
+        <div class="brand-avatar-wrap"><div class="brand-avatar"><img src="teacher-02.jpg" alt=""></div></div>
+        <div class="brand-body"><div class="b-name">mitte</div><div class="b-tag">レジン</div><div class="b-btn">フォロー</div></div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-cover"><img src="course-05.jpg" alt=""></div>
+        <div class="brand-avatar-wrap"><div class="brand-avatar"><img src="teacher-03.jpg" alt=""></div></div>
+        <div class="brand-body"><div class="b-name">son:mul</div><div class="b-tag">刺繍</div><div class="b-btn">フォロー</div></div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-cover"><img src="course-03.jpg" alt=""></div>
+        <div class="brand-avatar-wrap"><div class="brand-avatar"><img src="teacher-04.jpg" alt=""></div></div>
+        <div class="brand-body"><div class="b-name">ナエのニット</div><div class="b-tag">編み物</div><div class="b-btn">フォロー</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑩ インタビュー -->
+  <section>
+    <div class="section-title"><h2>インタビュー記事</h2><a class="more">もっと見る</a></div>
+    <div class="article-scroll">
+      <div class="article-card">
+        <div class="article-thumb"><img src="interview-01.jpg" alt=""></div>
+        <div class="article-info"><div class="a-label">INTERVIEW #01</div><div class="a-title">yukaさん｜刺繍でつなぐ、季節の物語</div><div class="a-teacher">son:mul</div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-thumb"><img src="interview-02.jpg" alt=""></div>
+        <div class="article-info"><div class="a-label">INTERVIEW #02</div><div class="a-title">sakuraさん｜副業から本業へ、私の10年</div><div class="a-teacher">mitte</div></div>
+      </div>
+      <div class="article-card">
+        <div class="article-thumb"><img src="feature-02.jpg" alt=""></div>
+        <div class="article-info"><div class="a-label">INTERVIEW #03</div><div class="a-title">miiさん｜マクラメで人生が変わった話</div><div class="a-teacher">citron</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑪ トレンド -->
+  <section>
+    <div class="section-title"><h2>注目のトレンドワード</h2></div>
+    <div class="trend-tags">
+      <span class="trend-tag">秋色アクセ</span>
+      <span class="trend-tag">クリスマス準備</span>
+      <span class="trend-tag">レジン基礎</span>
+      <span class="trend-tag">SNS撮影術</span>
+      <span class="trend-tag">刺繍ワッペン</span>
+      <span class="trend-tag">初心者OK</span>
+      <span class="trend-tag">売り方講座</span>
+      <span class="trend-tag">パラコード</span>
+      <span class="trend-tag">冬支度</span>
+    </div>
+  </section>
+
+  <!-- ⑫ 特集 -->
+  <section>
+    <div class="section-title"><h2>特集</h2><a class="more">もっと見る</a></div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="f-thumb"><img src="feature-01.jpg" alt=""></div>
+        <div class="f-body"><div class="f-label">SPECIAL</div><div class="f-title">秋の学びキャンペーン</div><div class="f-desc">対象コースが今だけ20%OFF。この季節にぴったりの新作講座を集めました。</div></div>
+      </div>
+      <div class="feature-item">
+        <div class="f-thumb"><img src="feature-02.jpg" alt=""></div>
+        <div class="f-body"><div class="f-label">FEATURE</div><div class="f-title">今こそ始める作家デビュー</div><div class="f-desc">初心者から作家になるまでのロードマップと、おすすめ講座5選。</div></div>
+      </div>
+      <div class="feature-item">
+        <div class="f-thumb"><img src="feature-03.jpg" alt=""></div>
+        <div class="f-body"><div class="f-label">FEATURE</div><div class="f-title">クリスマス作品コレクション</div><div class="f-desc">季節限定のクリスマス作品を作れる講座を厳選。</div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<nav class="bottom-nav">
+  <div class="nav-item active"><div class="icon-wrap"><svg class="ico ico-nav"><use href="#i-home"/></svg></div>ホーム</div>
+  <div class="nav-item"><div class="icon-wrap"><svg class="ico ico-nav"><use href="#i-search"/></svg></div>探す</div>
+  <div class="nav-item"><div class="icon-wrap"><svg class="ico ico-nav"><use href="#i-book"/></svg></div>マイ<br>レッスン</div>
+  <div class="nav-item"><div class="icon-wrap"><svg class="ico ico-nav"><use href="#i-heart"/></svg></div>お気に入り</div>
+  <div class="nav-item"><div class="icon-wrap"><svg class="ico ico-nav"><use href="#i-user"/></svg></div>マイ<br>ページ</div>
+</nav>
+
+</body>
+</html>
